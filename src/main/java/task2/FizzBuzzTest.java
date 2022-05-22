@@ -7,13 +7,13 @@ public class FizzBuzzTest {
     public static void main(String[] args) {
 
         FizzBuzz threadA = new FizzBuzz((number) -> {
-            if (number % 3 == 0) {
+            if (number % 3 == 0 && number % 5 != 0) {
                 System.out.println("fizz");
             }
         });
 
         FizzBuzz threadB = new FizzBuzz((number) -> {
-            if (number % 5 == 0) {
+            if (number % 5 == 0 && number % 3 != 0) {
 
                 System.out.println("buzz");
             }
